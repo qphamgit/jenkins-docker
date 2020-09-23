@@ -12,11 +12,10 @@ docker {
     files "plugins.txt"
 }
 
-dockerRun{
+dockerRun {
     name "${project.name}"
     image "${project.name}:${project.version}"
-    port '8080:8080'
+    ports '8080:8080'
     clean true
-    deamonize false
+    daemonize false
 }
-
